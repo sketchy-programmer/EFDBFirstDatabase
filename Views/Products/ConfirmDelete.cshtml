@@ -1,0 +1,16 @@
+﻿@model EFDBFirstDatabase.Models.Product
+
+@{
+    ViewBag.Title = "ConfirmDelete";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+<h2>Confirm Delete</h2>
+
+<p>Are you sure you want to delete the product <strong>@Model.ProductName</strong>?</p>
+
+<form action="/products/delete/@Model.ProductID" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn btn-secondary" href="/products/index">Cancel</a>
+</form>
+

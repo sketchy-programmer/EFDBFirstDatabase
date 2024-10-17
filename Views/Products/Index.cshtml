@@ -1,0 +1,39 @@
+﻿@model List<EFDBFirstDatabase.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products</h2>
+<a class="btn btn-primary" href="/products/create">Create</a>
+
+<table class="table">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Date of Purchase</th>
+        <th>Availability Status</th>
+        <th>CategoryID</th>
+        <th>BrandID</th>
+        <th>Active</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductID</td>
+            <td>@item.ProductName</td>
+            <td>@item.Price.Value.ToString("C")</td>
+            <td>@item.DateOfPurchase.Value.ToString("d/M/yyyy")</td>
+            <td>@item.AvailabilityStatus</td>
+            <td>@item.CategoryID</td>
+            <td>@item.BrandID</td>
+            <td>@item.Active</td>
+            <td>
+                <a class="btn btn-warning" href="/products/edit/@item.ProductID">Edit</a>
+                <a class="btn btn-danger" href="/products/confirmdelete/@item.ProductID">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
