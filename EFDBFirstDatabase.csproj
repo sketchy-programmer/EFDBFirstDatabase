@@ -296,7 +296,7 @@
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\ConfirmDelete.cshtml" />
-    <None Include="Properties\PublishProfiles\EFDBFirstDatabase20241017121951 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EFDBFirstDatabase20241106164704 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
